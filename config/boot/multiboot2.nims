@@ -1,0 +1,1 @@
+config["bootloader"] = "multiboot2"

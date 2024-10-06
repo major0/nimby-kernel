@@ -13,6 +13,11 @@ switch("define", "noSignalHandler")
 
 include "config/targets.nims"
 
+switch("define", "target=" & config["target"])
+switch("define", "arch=" & config["arch"])
+switch("define", "bootloader=" & config["bootloader"])
+switch("define", "fpu=" & config["fpu"])
+
 task build, "Build the kernel":
   setCommand("compile", project="src/kernel.nim")
 

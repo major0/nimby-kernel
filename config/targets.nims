@@ -29,3 +29,6 @@ elif (var c: char; @["x86", "i86pc"].contains(config["target"]) or scanf(config[
   include "x86_32/default.nims"
 else:
   error("Do not know how to build for target: " & config["target"])
+
+switch("path", "src/arch/" & config["arch"])
+switch("passC", "-Isrc/include")
